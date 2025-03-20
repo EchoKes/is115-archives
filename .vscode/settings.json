@@ -1,0 +1,10 @@
+{
+	"emmet.triggerExpansionOnTab": true,
+	"editor.tabCompletion": "on",
+	"emmet.useInlineCompletions": true,
+	"editor.autoClosingBrackets": "languageDefined",
+	"emmet.includeLanguages": {
+		"svelte": "html"
+	},
+	"editor.suggest.snippetsPreventQuickSuggestions": false
+}
