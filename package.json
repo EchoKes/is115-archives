@@ -32,6 +32,7 @@
 		"@fontsource/atkinson-hyperlegible": "^5.2.5",
 		"@fontsource/jetbrains-mono": "^5.2.5",
 		"lucide-svelte": "^0.483.0",
-		"open-props": "^1.7.13"
+		"open-props": "^1.7.13",
+		"shiki": "^3.2.1"
 	}
 }

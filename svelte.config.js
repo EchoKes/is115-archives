@@ -1,4 +1,5 @@
-import { mdsvex } from 'mdsvex';
+import { mdsvex, escapeSvelte } from 'mdsvex';
+import { createHighlighter } from 'shiki';
 import adapter from '@sveltejs/adapter-auto';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
@@ -8,7 +9,17 @@ const config = {
 	preprocess: [
 		vitePreprocess(),
 		mdsvex({
-			extensions: ['.md']
+			extensions: ['.md'],
+			highlight: {
+				highlighter: async (code, lang = 'text') => {
+					const highlighter = await createHighlighter({
+						themes: ['nord'],
+						langs: ['python']
+					});
+					const html = escapeSvelte(highlighter.codeToHtml(code, { lang, theme: 'nord' }));
+					return `{@html \`${html}\` }`;
+				}
+			}
 		})
 	],
 	kit: {

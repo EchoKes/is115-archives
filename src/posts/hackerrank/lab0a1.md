@@ -8,33 +8,33 @@ tags: ['Condition']
 complexity: 'O(1)'
 ---
 
-## 📝 Problem Statement
+#### Problem Statement
 
 Those who frequent pubs and clubs will know that some clubs impose entry requirements. A particular club in Singapore admits only men who are at least 23 years old and ladies who are at least 18 years old.
 
 Write a program to check if a male or female person of a certain age qualifies to enter this club. Get your input from STDIN and output your answer to STDOUT.
 
-## 🖥️ Input Format
+#### Input Format
 
 The character 'M' or 'F' (without quotes), followed by a space, and the age as an integer.
 
-## 📤 Output Format
+#### Output Format
 
 True or False
 
-## 🏷️ Constraints
+#### Constraints
 
-Input: x y where x is an element in `{M , F}`, and y is an integer
+Input: x y where x is an element in ['M' , 'F'], and y is an integer
 
-## 🚀 Solution Approach
+#### Solution Approach
 
 The program checks the **sex** and **age** conditions as follows:
 
-1. **If `sex == "F"` and `age > 17`**, return `True`.
-2. **If `sex == "M"` and `age > 22`**, return `True`.
-3. **Otherwise, return `False`.**
+1. **If sex == "F" and age > 17 **, return True.
+2. **If sex == "M" and age > 22 **, return True.
+3. **Otherwise, return False. **
 
-## 🧩 Code Implementation
+### Code Implementation
 
 ```python
 sex, age = input().split()
